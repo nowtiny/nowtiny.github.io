@@ -1,6 +1,8 @@
 import * as React from 'react';
 import injectSheet from 'react-jss';
 
+import Header from './Header';
+
 const latoRegular = require('./fonts/Lato-Regular.woff');
 const latoBold = require('./fonts/Lato-Bold.woff');
 
@@ -30,7 +32,7 @@ class App extends React.Component<Props, {}> {
     const { classes } = this.props;
     return (
       <div className={classes.app}>
-        fuck
+        <Header />
       </div>
     );
   }
