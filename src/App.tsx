@@ -1,19 +1,36 @@
 import * as React from 'react';
-import './App.css';
+import injectSheet from 'react-jss';
 
-const logo = require('./logo.svg');
+const latoRegular = require('./fonts/Lato-Regular.woff');
+const latoBold = require('./fonts/Lato-Bold.woff');
 
-class App extends React.Component<{}, {}> {
+const styles = {
+  '@font-face': [{
+    fontFamily: 'Lato',
+    src: `url(${latoRegular})`
+  }, {
+    fontFamily: 'Lato Bold',
+    src: `url(${latoBold})`
+  }],
+  app: {
+    'font-family': '"Lato", sans-serif',
+    'font-size': '18px',
+    'padding': '50px 80px'
+  }
+};
+
+export interface Props {
+  // TODO: fix to works with strictNullChecks
+  classes?: { [name: string]: string; };
+}
+
+@injectSheet(styles)
+class App extends React.Component<Props, {}> {
   render() {
+    const { classes } = this.props;
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
+      <div className={classes.app}>
+        fuck
       </div>
     );
   }
