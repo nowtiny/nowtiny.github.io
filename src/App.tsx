@@ -13,6 +13,10 @@ jss.use(compose());
 import Header from './Header';
 import Intro from './Intro';
 import Designs from './Designs';
+import Tools from './Tools';
+import People from './People';
+import Contact from './Contact';
+import Footer from './Footer';
 
 const latoRegular = require('./fonts/Lato-Regular.woff');
 const latoBold = require('./fonts/Lato-Bold.woff');
@@ -28,7 +32,7 @@ const styles = {
   app: {
     'font-family': '"Lato", sans-serif',
     'font-size': '18px',
-    'padding': '50px 80px'
+    'padding': '50px 80px 0 80px'
   }
 };
 
@@ -46,6 +50,10 @@ class App extends React.Component<Props, {}> {
         <Header />
         <Intro />
         <Designs />
+        <Tools />
+        <People />
+        <Contact />
+        <Footer />
       </div>
     );
   }
