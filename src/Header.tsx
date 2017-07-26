@@ -7,7 +7,7 @@ const logoGull = require('./images/logo_gull.png');
 const styles = {
   header: {
     overflow: 'visible',
-    marginBottom: '68px'
+    marginBottom: '108px'
   },
   title: {
     fontFamily: '"Lato Bold", sans-serif',
