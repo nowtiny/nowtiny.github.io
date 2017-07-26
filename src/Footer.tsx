@@ -1,7 +1,7 @@
 import * as React from 'react';
 import injectSheet from 'react-jss';
 
-const imgFav = require('./images/fav.png');
+const imgNyan = require('./images/nyan.gif');
 
 const styles = {
   footer: {
@@ -15,7 +15,7 @@ const styles = {
   },
   fav: {
     display: 'inline',
-    verticalAlign: 'text-bottom',
+    verticalAlign: 'middle',
     marginRight: '5px'
   }
 };
@@ -31,7 +31,7 @@ class Footer extends React.Component<Props, {}> {
     return (
       <div className={classes.footer}>
         <div className={classes.copyright}>
-          <img className={classes.fav} src={imgFav} />
+          <img className={classes.fav} src={imgNyan} />
           copyright @ NowTiny 2017
         </div>
       </div>
