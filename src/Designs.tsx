@@ -1,12 +1,16 @@
 import * as React from 'react';
 import injectSheet from 'react-jss';
 
-/* const imgWork = require('./images/work.png');*/
 const imgClientMoneyWiz = require('./images/client_moneywiz.png');
+const imgClientMoneyWiz2x = require('./images/client_moneywiz_2x.png');
 const imgClientGpx = require('./images/client_gpx.png');
+const imgClientGpx2x = require('./images/client_gpx_2x.png');
 const imgClientZiroom = require('./images/client_ziroom.png');
+const imgClientZiroom2x = require('./images/client_ziroom_2x.png');
 const imgClientBearychat = require('./images/client_bearychat.png');
+const imgClientBearychat2x = require('./images/client_bearychat_2x.png');
 const imgClientUmetrip = require('./images/client_umetrip.png');
+const imgClientUmetrip2x = require('./images/client_umetrip_2x.png');
 
 const styles = {
   designs: {
@@ -35,13 +39,14 @@ const styles = {
     background: '#eef0f5',
     width: '240px',
     height: '120px',
+    backgroundSize: '240px 120px',
     '& a': {
       width: '240px',
       height: '120px',
       display: 'block'
     },
     '&:hover': {
-      backgroundColor: '#323b45',
+      backgroundColor: '#e6e9ee',
       '& $workItemType': {
         color: '#ffffff'
       }
@@ -75,6 +80,23 @@ const styles = {
   workItemUmetrip: {
     extend: 'workItem',
     backgroundImage: `url(${imgClientUmetrip})`
+  },
+  '@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)': {
+    workItemMoneywiz: {
+      backgroundImage: `url(${imgClientMoneyWiz2x})`
+    },
+    workItemGpx: {
+      backgroundImage: `url(${imgClientGpx2x})`
+    },
+    workItemZiroom: {
+      backgroundImage: `url(${imgClientZiroom2x})`
+    },
+    workItemBearychat: {
+      backgroundImage: `url(${imgClientBearychat2x})`
+    },
+    workItemUmetrip: {
+      backgroundImage: `url(${imgClientUmetrip2x})`
+    }
   }
 };
 
@@ -94,23 +116,18 @@ class Designs extends React.Component<Props, {}> {
         </div>
         <ul className={classes.works}>
           <li className={classes.workItemMoneywiz}>
-            <div className={classes.workItemType}>client</div>
             <a href="https://www.behance.net/gallery/54617719/MoneyWizs-redesign-a-finance-mac-app-redesign" target="_blank"/>
           </li>
           <li className={classes.workItemGpx}>
-            <div className={classes.workItemType}>proposal</div>
             <a href="https://www.behance.net/gallery/53057189/Mac-app-GPX-Binder-redesign" target="_blank"/>
           </li>
           <li className={classes.workItemZiroom}>
-            <div className={classes.workItemType}>proposal</div>
             <a href="https://marvelapp.com/2372igi" target="_blank"/>
           </li>
           <li className={classes.workItemBearychat}>
-            <div className={classes.workItemType}>designed</div>
             <a href="https://bearychat.com" target="_blank"/>
           </li>
           <li className={classes.workItemUmetrip}>
-            <div className={classes.workItemType}>proposal</div>
             <a href="https://www.behance.net/gallery/37993017/UMETRIP-iOS-app-Redesign" target="_blank"/>
           </li>
         </ul>

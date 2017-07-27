@@ -14,8 +14,11 @@ const styles = {
   desc: {
     lineHeight: '36px',
     color: '#383838',
-    marginBottom: '20px',
+    marginBottom: '30px',
     textAlign: 'justify'
+  },
+  tel: {
+    marginBottom: '18px'
   }
 };
 
@@ -35,8 +38,8 @@ class Tools extends React.Component<Props, {}> {
         <div className={classes.desc}>
           We can’t control stock’s price, but we can control how those apps be used.
         </div>
-        <div>Tel-us: <a>(+86)18513584947</a></div>
-        <div>Email-us: <a>hey@nowtiny.com</a></div>
+        <div className={classes.tel}>Tel-us: <a href="tel:+8618513584947">(+86)18513584947</a></div>
+        <div>Email-us: <a href="mailto:hey@nowtiny.com">hey@nowtiny.com</a></div>
       </div>
     );
   }

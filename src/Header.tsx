@@ -1,13 +1,16 @@
 import * as React from 'react';
 import injectSheet from 'react-jss';
 
-const logo = require('./images/logo.png');
-const logoGull = require('./images/logo_gull.png');
+const imgLogo = require('./images/logo.png');
+const imgLogo2x = require('./images/logo_2x.png');
+const imgLogoGull = require('./images/logo_gull.png');
+const imgLogoGull2x = require('./images/logo_gull_2x.png');
 
 const styles = {
   header: {
-    overflow: 'visible',
-    marginBottom: '108px'
+    overflow: 'hidden',
+    paddingTop: '50px',
+    marginBottom: '68px'
   },
   title: {
     fontFamily: '"Lato Bold", sans-serif',
@@ -30,9 +33,13 @@ const styles = {
     }
   },
   logo: {
-    display: 'inline',
+    display: 'inline-block',
     verticalAlign: 'text-bottom',
-    marginRight: '5px'
+    marginRight: '5px',
+    width: '26px',
+    height: '26px',
+    backgroundSize: '26px 26px',
+    backgroundImage: `url(${imgLogo})`
   },
   logoGull: {
     visibility: 'hidden',
@@ -40,7 +47,11 @@ const styles = {
     display: 'block',
     top: '-19px',
     left: '24px',
-    transform: 'rotate(5deg)'
+    width: '26px',
+    height: '26px',
+    transform: 'rotate(5deg)',
+    backgroundSize: '26px 26px',
+    backgroundImage: `url(${imgLogoGull})`
   },
   menu: {
     marginTop: '15px',
@@ -50,6 +61,14 @@ const styles = {
     display: 'inline',
     fontSize: '16px',
     marginLeft: '40px'
+  },
+  '@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)': {
+    logo: {
+      backgroundImage: `url(${imgLogo2x})`
+    },
+    logoGull: {
+      backgroundImage: `url(${imgLogoGull2x})`
+    }
   }
 };
 
@@ -64,14 +83,12 @@ class Header extends React.Component<Props, {}> {
     return (
       <div className={classes.header}>
         <div className={classes.metaBlock}>
-          <img className={classes.logo} src={logo} />
-          <img className={classes.logoGull} src={logoGull} />
+          <div className={classes.logo} />
+          <div className={classes.logoGull} />
           <div className={classes.title}>NowTiny</div>
           <div className={classes.subtitle}>design stuff with you</div>
         </div>
         <ul className={classes.menu}>
-          <li className={classes.menuItem}>Tel-me</li>
-          <li className={classes.menuItem}>Design Tours</li>
           <li className={classes.menuItem}>Resources</li>
         </ul>
       </div>

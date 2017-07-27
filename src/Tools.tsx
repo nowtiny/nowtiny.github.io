@@ -2,11 +2,17 @@ import * as React from 'react';
 import injectSheet from 'react-jss';
 
 const imgSketch = require('./images/tool_sketch.png');
+const imgSketch2x = require('./images/tool_sketch_2x.png');
 const imgAI = require('./images/tool_ai.png');
+const imgAI2x = require('./images/tool_ai_2x.png');
 const imgZeplin = require('./images/tool_zeplin.png');
+const imgZeplin2x = require('./images/tool_zeplin_2x.png');
 const imgPrott = require('./images/tool_prott.png');
+const imgPrott2x = require('./images/tool_prott_2x.png');
 const imgMarvel = require('./images/tool_marvel.png');
+const imgMarvel2x = require('./images/tool_marvel_2x.png');
 const imgiMessage = require('./images/tool_imessage.png');
+const imgiMessage2x = require('./images/tool_imessage_2x.png');
 
 const styles = {
   tools: {
@@ -32,8 +38,9 @@ const styles = {
     marginRight: '20px',
     borderRadius: '4px',
     backgroundColor: '#eef0f5',
+    backgroundSize: '80px 80px',
     '&:hover': {
-      backgroundColor: '#FBFCFD'
+      backgroundColor: '#e6e9ee'
     },
     '& img': {
       verticalAlign: 'middle'
@@ -67,6 +74,26 @@ const styles = {
   toolItemiMessage: {
     extend: 'toolItem',
     backgroundImage: `url(${imgiMessage})`
+  },
+  '@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)': {
+    toolItemSketch: {
+      backgroundImage: `url(${imgSketch2x})`
+    },
+    toolItemAI: {
+      backgroundImage: `url(${imgAI2x})`
+    },
+    toolItemZeplin: {
+      backgroundImage: `url(${imgZeplin2x})`
+    },
+    toolItemPrott: {
+      backgroundImage: `url(${imgPrott2x})`
+    },
+    toolItemMarvel: {
+      backgroundImage: `url(${imgMarvel2x})`
+    },
+    toolItemiMessage: {
+      backgroundImage: `url(${imgiMessage2x})`
+    }
   }
 };
 
@@ -88,7 +115,7 @@ class Tools extends React.Component<Props, {}> {
         </div>
         <ul className={classes.toolsMenu}>
           <li className={classes.toolItemSketch}><a href="https://sketchapp.com/" target="_blank"/></li>
-          <li className={classes.toolItemAI}><a href="www.adobe.com/products/illustrator.html" target="_blank"/></li>
+          <li className={classes.toolItemAI}><a href="https://www.adobe.com/products/illustrator.html" target="_blank"/></li>
           <li className={classes.toolItemZeplin}><a href="https://zeplin.io/" target="_blank"/></li>
           <li className={classes.toolItemPrott}><a href="https://prottapp.com/" target="_blank"/></li>
           <li className={classes.toolItemMarvel}><a href="https://marvelapp.com/" target="_blank"/></li>

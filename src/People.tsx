@@ -13,6 +13,18 @@ const imgSocialInstagramBW = require('./images/social_instagram_bw.png');
 const imgSocialBlog = require('./images/social_blog.png');
 const imgSocialBlogBW = require('./images/social_blog_bw.png');
 
+const imgAvatar2x = require('./images/avatar_2x.png');
+const imgSocialTwitter2x = require('./images/social_twitter_2x.png');
+const imgSocialTwitterBW2x = require('./images/social_twitter_bw_2x.png');
+const imgSocialDribbble2x = require('./images/social_dribbble_2x.png');
+const imgSocialDribbbleBW2x = require('./images/social_dribbble_bw_2x.png');
+const imgSocialBehance2x = require('./images/social_behance_2x.png');
+const imgSocialBehanceBW2x = require('./images/social_behance_bw_2x.png');
+const imgSocialInstagram2x = require('./images/social_instagram_2x.png');
+const imgSocialInstagramBW2x = require('./images/social_instagram_bw_2x.png');
+const imgSocialBlog2x = require('./images/social_blog_2x.png');
+const imgSocialBlogBW2x = require('./images/social_blog_bw_2x.png');
+
 const styles = {
   people: {
     overflow: 'hidden',
@@ -34,7 +46,11 @@ const styles = {
   avatar: {
     float: 'left',
     borderRadius: '4px',
-    marginRight: '20px'
+    marginRight: '20px',
+    width: '60px',
+    height: '60px',
+    backgroundSize: '60px 60px',
+    backgroundImage: `url(${imgAvatar})`
   },
   name: {
     marginBottom: '8px'
@@ -45,6 +61,7 @@ const styles = {
     '& a': {
       width: '30px',
       height: '30px',
+      backgroundSize: '30px 30px',
       borderRadius: '2px',
       display: 'inline-block'
     }
@@ -78,6 +95,41 @@ const styles = {
     '&:hover': {
       backgroundImage: `url(${imgSocialBlog})`
     }
+  },
+  '@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)': {
+    avatar: {
+      backgroundImage: `url(${imgAvatar2x})`
+    },
+    socialItemTwitter: {
+      backgroundImage: `url(${imgSocialTwitterBW2x})`,
+      '&:hover': {
+        backgroundImage: `url(${imgSocialTwitter2x})`
+      }
+    },
+    socialItemDribbble: {
+      backgroundImage: `url(${imgSocialDribbbleBW2x})`,
+      '&:hover': {
+        backgroundImage: `url(${imgSocialDribbble2x})`
+      }
+    },
+    socialItemBehance: {
+      backgroundImage: `url(${imgSocialBehanceBW2x})`,
+      '&:hover': {
+        backgroundImage: `url(${imgSocialBehance2x})`
+      }
+    },
+    socialItemInstagram: {
+      backgroundImage: `url(${imgSocialInstagramBW2x})`,
+      '&:hover': {
+        backgroundImage: `url(${imgSocialInstagram2x})`
+      }
+    },
+    socialItemBlog: {
+      backgroundImage: `url(${imgSocialBlogBW2x})`,
+      '&:hover': {
+        backgroundImage: `url(${imgSocialBlog2x})`
+      }
+    }
   }
 };
 
@@ -98,7 +150,7 @@ class Tools extends React.Component<Props, {}> {
           We are a small team now , there is just 1 person behind this page. Maybe he is sketchings now, or buzzing something.
         </div>
         <div className={classes.details}>
-          <img className={classes.avatar} src={imgAvatar} />
+          <div className={classes.avatar} />
           <div className={classes.name}>sheldonrrr</div>
           <ul>
             <li className={classes.socialItem}><a className={classes.socialItemTwitter} href="https://twitter.com/sheldonrrr" target="_blank"/></li>

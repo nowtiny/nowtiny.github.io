@@ -30,9 +30,11 @@ const styles = {
     src: `url(${latoBold})`
   }],
   app: {
-    'font-family': '"Lato", sans-serif',
-    'font-size': '18px',
-    'padding': '50px 80px 0 80px'
+    fontFamily: '"Lato", sans-serif',
+    fontSize: '18px',
+    margin: '0 auto',
+    width: '900px',
+    color: '#383838'
   }
 };
 
