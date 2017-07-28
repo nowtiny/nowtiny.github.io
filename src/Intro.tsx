@@ -74,7 +74,7 @@ class Intro extends React.Component<Props, {}> {
       <div className={classes.intro}>
         <div className={classes.title}>We design Apps & Brands.</div>
         <div className={classes.desc}>
-          Hey, this is NowTiny. We design stuff in BeiJing. Our goal is to make people’s apps or services archive a better use experience. Design is what it looks, also is how it works. Punch us if you have wonderful things  to scratch. <a>Mail-to-us</a>, <a>Tel-us</a>.
+          Hey, this is NowTiny. We design stuff in BeiJing. Our goal is to make people’s apps or services archive a better use experience. Design is what it looks, also is how it works. Punch us if you have wonderful things  to scratch. <a  href="mailto:hey@nowtiny.com">Mail-to-us</a>, <a href="tel:+8618513584947">Tel-us</a>.
         </div>
         <div className={classes.devices}>
           <div className={classes.tablet} />

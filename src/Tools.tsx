@@ -108,10 +108,10 @@ class Tools extends React.Component<Props, {}> {
     return (
       <div className={classes.tools}>
         <div className={classes.title}>
-          What we used for scratch pixels
+          What we use for scratch pixels
         </div>
         <div className={classes.desc}>
-          <a>Sketch</a>、<a>Adobe illustrator</a> is our first choice. Also other tools maybe rised in the whole progress: <a>Adobe Photoshop</a>、<a>Zeplin</a>、<a>Prottapp</a>、<a>Marvelapp</a>、<a>Origami</a>、<a>iMessage</a>.
+          Sketch、Adobe illustrator is our first choice. Also other tools maybe rised in the whole progress: Adobe Photoshop、Zeplin、Prottapp、Marvelapp、Origami、iMessage.
         </div>
         <ul className={classes.toolsMenu}>
           <li className={classes.toolItemSketch}><a href="https://sketchapp.com/" target="_blank"/></li>
